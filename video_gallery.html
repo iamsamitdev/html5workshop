@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="th">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Video Gallery</title>
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!--[if It IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+        <main>
+                <h1 align="center">Video Gallery</h1>
+                <section class="row">
+                        <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=862r3XS2YB0" 
+                            class="image-link">
+                                <img src="http://img.youtube.com/vi/862r3XS2YB0/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+
+                        <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=bsb0xoSumEk" class="image-link">
+                                <img src="http://img.youtube.com/vi/bsb0xoSumEk/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+
+                        <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=Tx_lyy4-SeY" class="image-link">
+                                <img src="http://img.youtube.com/vi/Tx_lyy4-SeY/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+                </section>
+
+                <section class="row">
+                    <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=62hQpiPEquI" class="image-link">
+                                <img src="http://img.youtube.com/vi/62hQpiPEquI/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+
+                        <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=SsE5U7ta9Lw" class="image-link">
+                                <img src="http://img.youtube.com/vi/SsE5U7ta9Lw/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+
+                        <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=UBZB_xEF7Ws" class="image-link">
+                                <img src="http://img.youtube.com/vi/UBZB_xEF7Ws/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                        </section>
+                </section>
+
+                <section class="row">
+                    <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=xf8K4P4bhK8" class="image-link">
+                                <img src="http://img.youtube.com/vi/xf8K4P4bhK8/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                    </section>
+
+                    <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=6_4YugpwxNI" class="image-link">
+                                <img src="http://img.youtube.com/vi/6_4YugpwxNI/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                    </section>
+
+                    <section class="video-thumb">
+                            <a href="https://www.youtube.com/watch?v=lUBKZHEowDQ" class="image-link">
+                                <img src="http://img.youtube.com/vi/lUBKZHEowDQ/hqdefault.jpg">
+                                <img src="images/youtube_play.png" width="64" class="btnplay">
+                            </a>
+                    </section>
+                </section>
+        </main>
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    $('.image-link').magnificPopup({
+                        type:'iframe',
+                        gallery:{
+                            enabled:true
+                        },
+                        iframe: {
+                                  markup: '<div class="mfp-iframe-scaler">'+
+                                            '<div class="mfp-close"></div>'+
+                                            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                                          '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+                                  patterns: {
+                                    youtube: {
+                                      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                                      id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                                      // Or null - full URL will be returned
+                                      // Or a function that should return %id%, for example:
+                                      // id: function(url) { return 'parsed id'; }
+
+                                      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+                                    },
+                                    vimeo: {
+                                      index: 'vimeo.com/',
+                                      id: '/',
+                                      src: '//player.vimeo.com/video/%id%?autoplay=1'
+                                    },
+                                    gmaps: {
+                                      index: '//maps.google.',
+                                      src: '%id%&output=embed'
+                                    }
+
+                                    // you may add here more sources
+
+                                  },
+
+                                  srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+                                }
+                    });
+                });
+        </script>
+
+    </body>
+</html>

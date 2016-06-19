@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="th">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Contact</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!--[if It IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+                function outputUpdate(vol)
+                {
+                    document.querySelector("#result").value = vol+'%';
+                }
+        </script>
+
+
+    </head>
+    <body>
+        
+        <main>
+                <header>
+                    <img src="images/bannertop.jpg">
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="html5layout.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <section id="content">
+                     <h1>Contact pages</h1>
+                     <form name="contact-us" method="post" action="contact.html">
+                         
+                         <fieldset>
+                             <legend>Form Contact</legend>
+
+                             <label>Fullname:</label>
+                             <input type="text" name="fullname" placeholder="ป้อนชื่อ" required>
+
+                             <label>Email:</label>
+                             <input type="email" name="email" placeholder="ป้อนอีเมล์" required multiple>
+
+                             <label>Pic Profile</label>
+                             <input type="file" name="pic-profile" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                             
+                             <div style="margin-left: 150px">
+                                <img src="" id="output" height="100">
+                             </div>
+
+                             <label>Favorite Color</label>
+                             <input type="text" list="color" id="favcolor" name="favcolor" required>
+
+                             <datalist id="color">
+                                    <option value="red">
+                                    <option value="green">
+                                    <option value="blue">
+                                    <option value="pink">
+                             </datalist>
+
+                             <label>Search:</label>
+                             <input type="search" name="search">
+
+                             <label>Website:</label>
+                             <input type="url" name="website">
+
+                             <label>Tel:</label>
+                             <input type="tel" name="tel">
+
+                             <label>Salary</label>
+                             <input type="number" name="salary">
+
+                             <label>Knowledge:</label>
+                             <input type="range" value="0" step="1" min="0" max="100" name="knowledge" id="knowledge" oninput="outputUpdate(value)">
+
+                             <output id="result">0</output>
+
+                             <label>Color:</label>
+                             <input type="color" name="color">
+
+                             <label>Birth Date:</label>
+                             <input type="datetime-local" name="date">
+
+                             <input type="submit" value="Submit">
+                         </fieldset>
+
+                     </form>
+                </section>
+
+                <footer>
+                     <section id="footer-left">
+                         &copy;CopyRight 2016-2017 ITGenius.co.th
+                     </section>
+                     <section id="footer-right">
+                         www.itgenius.co.th
+                     </section>
+                </footer>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

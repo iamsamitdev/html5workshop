@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CSS3 Selector</title>
+        
+        <!--[if It IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style type="text/css">
+            /*div[id^="content"]
+            {
+                background-color: #EED60A;
+            }
+
+            div[id$="primary"]
+            {
+                background-color: #EED60A;
+            }
+            */
+
+            div[id*="content"]
+            {
+                background-color: #EED60A;
+            }
+
+            #content-primary:target
+            {
+                background-color: #EB0606;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        
+        <a href="#content-primary">Go to Content Primary</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="nav-primary">D1</div>
+        <div id="content-primary">D2</div>
+        <div id="content-secondary">D3</div>
+        <div id="tertiary-content">D4</div>
+        <div id="nav-secondary">D5</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
